@@ -7,13 +7,12 @@
   @include vp-1199 {
     flex-direction: column;
     align-items: center;
-    padding: 100px 45px;
+    padding: 100px 45px 0;
   }
 
   @include vp-767 {
-    padding: 70px 0;
+    padding: 70px 0 40px;
   }
-
 }
 
 .gym__text-wrapper {
@@ -77,6 +76,7 @@
 
   @include vp-767 {
     margin-bottom: 33px;
+
     h2 {
       padding-right: 15px;
       padding-left: 15px;
@@ -104,7 +104,15 @@
 .gym__image {
   flex-shrink: 0;
 
+  @include vp-1199 {
+    img {
+      width: 678px;
+    }
+  }
+
   @include vp-767 {
-    width: 320px;
+    img {
+      width: 320px;
+    }
   }
 }
