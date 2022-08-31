@@ -5,6 +5,46 @@ import {initModals} from './modules/modals/init-modals';
 
 window.addEventListener('DOMContentLoaded', () => {
 
+  function findVideos() {
+    const videos = document.querySelectorAll('.video');
+
+    for (let i = 0; i < videos.length; i++) {
+      setupVideo(videos[i]);
+    }
+  }
+
+  function setupVideo(video) {
+    const button = video.querySelector('.video__link-button');
+    const href = button.href;
+
+    button.addEventListener('click', (evt) => {
+      const iframe = createIframe(href);
+      evt.preventDefault();
+      button.remove();
+      video.appendChild(iframe);
+    });
+
+    button.removeAttribute('href');
+  }
+
+  function createIframe(href) {
+    const iframe = document.createElement('iframe');
+
+    iframe.setAttribute('allowfullscreen', '');
+    iframe.setAttribute('allow', 'autoplay');
+    iframe.setAttribute('src', generateURL(href));
+    iframe.classList.add('video__media');
+
+    return iframe;
+  }
+
+  function generateURL(href) {
+    const query = '?rel=0&showinfo=0&autoplay=1';
+    return href + query;
+  }
+
+  findVideos();
+
   // Utils
   // ---------------------------------
 

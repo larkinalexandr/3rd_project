@@ -1,0 +1,121 @@
+.video {
+  @include container;
+  position: relative;
+  top: -233px;
+  right: -39px;
+  width: 364px;
+  height: 228px;
+  background-color: #000000;
+
+  @include vp-1199 {
+    top: unset;
+    right: unset;
+    width: 266px;
+    height: 167px;
+    transform: translate(0, -50%);
+  }
+
+  @include vp-767 {
+    margin-bottom: 70px;
+    width: 320px;
+    height: 167px;
+    transform: unset;
+  }
+}
+
+.video__preview {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(20, 54, 122, 0.5);
+  }
+}
+
+.video__media {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(20, 54, 122, 0.5);
+  }
+
+  background: rgba(20, 54, 122, 0.5);
+}
+
+.video__link-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  background: linear-gradient(44.89deg, #003d85 25.38%, #b80027 74.89%);
+  cursor: pointer;
+  user-select: none;
+  transition: $trans-600;
+  transition-property: transform;
+
+  &:hover,
+  &:focus-visible {
+    transform: translate(-50%, -50%) scale(1.2);
+    background: linear-gradient(44.89deg, #0155b7 25.38%, #d2032f 74.89%);
+  }
+
+  &:active {
+    background: linear-gradient(44.89deg, #0368e1 25.38%, #fa0338 74.89%);
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    background-image: linear-gradient(97.05deg, rgba(237, 2, 51, 0.2) 17.6%, rgba(0, 62, 183, 0.2) 95.31%);
+    mask-image: radial-gradient(circle at center, transparent 67%, #ffffff 68%);
+    user-select: none;
+  }
+
+  @include vp-1199 {
+    width: 52px;
+    height: 52px;
+
+    &::before {
+      width: 73px;
+      height: 73px;
+    }
+
+    svg {
+      width: 12px;
+      height: 12px;
+    }
+  }
+}
