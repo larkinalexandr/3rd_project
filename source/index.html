@@ -90,7 +90,34 @@
     </div>
   </header>
   <main>
-    <section class="intro">
+    <section class="gym">
+      <div class="gym__container">
+        <div class="gym__text-wrapper">
+          <h2>Тренажерный зал</h2>
+          <span>Просторный зал площадью 900 кв/м</span>
+          <p>Supergym – самый большой фитнес центр за Уралом и идеальное место для укрепления тела и здоровья.
+            Тренажерный
+            зал оснащен всем необходимым современным оборудованием для всех спортсменов.</p>
+          <p>В зале расположены отдельная зона для Crossfit и кардио-зона с 40 тренажерами. Также в фитнес центре есть
+            несколько оборудованных залов для различных видов групповых занятий. </p>
+        </div>
+        <div class="gym__image">
+          <picture>
+            <!-- 1х: 320px; 2x: 640px -->
+            <source type="image/webp" media="(max-width: 767px)" srcset="img/content/gym-m@1x.webp 1x, img/content/gym-m@2x.webp 2x">
+            <!-- 1х: 678px; 2x: 1356px -->
+            <source type="image/webp" media="(max-width: 1199px)" srcset="img/content/gym-t@1x.webp 1x, img/content/gym-t@2x.webp 2x">
+            <!-- 1х: 660px; 2x: 1320px -->
+            <source type="image/webp" srcset="img/content/gym-d@1x.webp 1x, img/content/gym-d@2x.webp 2x">
+            <!-- 1х: 320px; 2x: 640px -->
+            <source media="(max-width: 767px)" srcset="img/content/gym-m@1x.jpg 1x, img/content/gym-m@2x.jpg 2x">
+            <!-- 1х: 678px; 2x: 1356px -->
+            <source media="(max-width: 1199px)" srcset="img/content/gym-t@1x.jpg 1x, img/content/gym-t@2x.jpg 2x">
+            <!-- 1х: 660px; 2x: 1320px -->
+            <img src="img/content/gym-d@1x.jpg" width="660" height="401" alt="Наш зал и тренажеры." srcset="img/content/gym-d@2x.jpg 2x">
+          </picture>
+        </div>
+      </div>
     </section>
   </main>
   <footer class="footer">
