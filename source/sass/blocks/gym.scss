@@ -1,0 +1,110 @@
+.gym__container {
+  @include container;
+  display: flex;
+  justify-content: space-between;
+  padding: 120px 65px;
+
+  @include vp-1199 {
+    flex-direction: column;
+    align-items: center;
+    padding: 100px 45px;
+  }
+
+  @include vp-767 {
+    padding: 70px 0;
+  }
+
+}
+
+.gym__text-wrapper {
+  display: flex;
+  flex-direction: column;
+  margin: 49px 15px 0 60px;
+  max-width: 355px;
+  color: #102654;
+
+  h2 {
+    margin: 0 0 5px;
+    font-family: $ff-bebas-neue;
+    font-weight: 700;
+    font-size: 49px;
+    line-height: 49px;
+    letter-spacing: 0.03em;
+  }
+
+  span {
+    margin-bottom: 40px;
+    font-family: $ff-roboto-condensed;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 27px;
+  }
+
+  p {
+    margin: 0 0 8px;
+    font-family: $ff-roboto-condensed;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  @include vp-1199 {
+    margin: 0 0 43px;
+    max-width: unset;
+
+    h2 {
+      margin-bottom: 7px;
+      font-size: 42px;
+      line-height: 42px;
+      text-align: center;
+    }
+
+    span {
+      margin-bottom: 35px;
+      text-align: center;
+    }
+
+    p {
+      padding: 0 55px;
+      margin: 0;
+      text-align: center;
+
+      &:nth-of-type(+2n) {
+        display: none;
+      }
+    }
+  }
+
+  @include vp-767 {
+    margin-bottom: 33px;
+    h2 {
+      padding-right: 15px;
+      padding-left: 15px;
+      margin-bottom: 4px;
+      font-size: 32px;
+      line-height: 32px;
+      text-align: unset;
+    }
+
+    span {
+      padding-right: 15px;
+      padding-left: 15px;
+      margin-bottom: 25px;
+      text-align: unset;
+    }
+
+    p {
+      padding-right: 45px;
+      padding-left: 15px;
+      text-align: unset;
+    }
+  }
+}
+
+.gym__image {
+  flex-shrink: 0;
+
+  @include vp-767 {
+    width: 320px;
+  }
+}
