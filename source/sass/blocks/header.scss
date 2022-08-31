@@ -1,0 +1,103 @@
+.header {
+  background: conic-gradient(from 130deg at 16% 39%, #b80027 -47deg, #003d85 32deg, #b80027 313deg, #003d85 392deg);
+
+  @include vp-767 {
+    background: conic-gradient(from 171.43deg at 35.31% 34.22%, #b80027 -46.69deg, #003d85 32.24deg, #b80027 313.31deg, #003d85 392.24deg);
+  }
+}
+
+.header__container {
+  @include container;
+  padding-right: 66px;
+  padding-left: 64px;
+
+  @include vp-1199 {
+    padding-left: 44px;
+    padding-right: 46px;
+  }
+
+  @include vp-767 {
+    padding-left: 13px;
+    padding-right: 13px;
+  }
+}
+
+.header__top-wrapper {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding-top: 31px;
+
+  @include vp-1199 {
+    padding-top: 40px;
+  }
+
+  @include vp-767 {
+    padding: 17px 2px 0;
+  }
+}
+
+.header__logo {
+  width: 89px;
+  height: 20px;
+
+  @include vp-1199 {
+    width: 82px;
+    height: 18px;
+  }
+
+  @include vp-767 {
+    width: 68px;
+    height: auto;
+  }
+}
+
+.header__phone-wrapper {
+  position: absolute;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+
+  a {
+    display: flex;
+    font-family: $ff-bebas-neue;
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 26px;
+    letter-spacing: 0.03em;
+    color: #ffffff;
+    transition: $trans-600;
+    transition-property: transform;
+
+
+    &:hover,
+    &:focus-visible {
+      transform: scale(1.2);
+    }
+
+    &:active {
+      color: #dadaef;
+    }
+  }
+
+  @include vp-1199 {
+    position: static;
+
+    a {
+      font-size: 24px;
+      line-height: 24px;
+      letter-spacing: 0.02em;
+    }
+  }
+
+  @include vp-767 {
+    margin-top: 3px;
+
+    a {
+      font-size: 20px;
+      line-height: 20px;
+    }
+  }
+}
