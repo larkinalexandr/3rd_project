@@ -1,0 +1,19 @@
+.tickets {
+  background-color: #f8f9fc;
+}
+
+.tickets__container {
+  @include container;
+  padding: 120px 65px;
+
+  h2 {
+    margin: 0 0 33px;
+    font-family: $ff-bebas-neue;
+    font-size: 49px;
+    font-weight: 700;
+    line-height: 49px;
+    letter-spacing: 0.03em;
+    text-align: center;
+    text-transform: uppercase;
+  }
+}

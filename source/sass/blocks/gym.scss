@@ -2,7 +2,7 @@
   @include container;
   display: flex;
   justify-content: space-between;
-  padding: 120px 65px;
+  padding: 120px 65px 7px;
 
   @include vp-1199 {
     flex-direction: column;
