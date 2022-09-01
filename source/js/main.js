@@ -46,6 +46,26 @@ window.addEventListener('DOMContentLoaded', () => {
   findVideos();
 
   // Utils
+
+  const tabs = document.querySelector('.tabs__title-list');
+  const tabsContent = document.querySelector('.tabs__content');
+  const tab = tabs.querySelectorAll('li');
+  const tabContent = tabsContent.querySelectorAll('ul');
+
+  const setActiveTab = (index) => {
+    tab.forEach((element) => element.classList.remove('is-active'));
+    tabContent.forEach((element) => element.classList.remove('is-active'));
+    tab[index].classList.add('is-active');
+    tabContent[index].classList.add('is-active');
+  };
+
+  for (let i = 0; i < tab.length; i++) {
+    tab[i].addEventListener('click', () => {
+      setActiveTab(i);
+    });
+  }
+
+
   // ---------------------------------
 
   iosVhFix();

@@ -1,0 +1,253 @@
+.tabs {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto auto;
+}
+
+.tabs__header {
+  position: relative;
+  margin: 0 auto 38px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 2px;
+    background-color: rgba(120, 120, 120, 0.2);
+    z-index: 1;
+  }
+
+  @include vp-1199 {
+    margin-bottom: 44px;
+  }
+
+  @include vp-767 {
+    margin-bottom: 36px;
+  }
+}
+
+.tabs__title-list {
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  column-gap: 45px;
+  row-gap: 15px;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+
+
+  button {
+    position: relative;
+    padding: 0 0 11px;
+    margin: 0;
+    font-family: $ff-roboto-condensed;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 30px;
+    color: rgba(16, 38, 84, 0.5);
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    user-select: none;
+    z-index: 2;
+    transition: $trans-600;
+    transition-property: transform;
+
+
+    &:hover,
+    &:focus-visible {
+      color: #d10a42;
+    }
+
+    &:active {
+      color: #8505af;
+    }
+  }
+
+  @include vp-1199 {
+    column-gap: 55px;
+
+    button {
+      font-size: 18px;
+      line-height: 27px;
+    }
+  }
+
+  @include vp-767 {
+    column-gap: 45px;
+
+    button {
+      font-size: 16px;
+      line-height: 24px;
+    }
+  }
+}
+
+.tabs__title-list li.is-active {
+  button {
+    color: #102654;
+    border-bottom: 2px solid #d10a42;
+
+    &:focus-visible {
+      color: #d10a42;
+    }
+  }
+}
+
+.tabs__content {
+  ul {
+    margin: 0;
+    padding: 0;
+    display: none;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 40px;
+  }
+}
+
+.tabs__content ul.is-active {
+  display: grid;
+
+  @include vp-1199 {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.tabs__content-item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 56px 10px 60px;
+  margin: 0;
+  list-style-type: none;
+  background-color: #ffffff;
+  border: 7px solid #ffffff;
+
+  h3 {
+    margin: 0 0 10px;
+    font-family: $ff-roboto-condensed;
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 29px;
+    color: #102654;
+  }
+
+  p {
+    margin: 0 0 66px;
+    font-family: $ff-roboto-condensed;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #495a7d;
+  }
+
+  b {
+    margin-bottom: 33px;
+    position: relative;
+    font-family: $ff-roboto-condensed;
+    font-weight: 700;
+    font-size: 60px;
+    line-height: 90px;
+    color: #103aae;
+    z-index: 1;
+
+    &::before {
+      content: attr(data-price);
+      position: absolute;
+      left: 50%;
+      top: -60%;
+      transform: translate(-50%, 0);
+      font-size: 100px;
+      line-height: 150px;
+      color: #e8e8e8;
+      z-index: -1;
+      opacity: 0.48;
+    }
+  }
+
+  a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    min-width: 208px;
+    min-height: 66px;
+    font-family: $ff-roboto-condensed;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 14px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    border: 2px solid #102654;
+    box-sizing: border-box;
+    user-select: none;
+    cursor: pointer;
+  }
+
+  &:hover,
+  &:focus-visible,
+  &:focus-within {
+    border: 7px solid transparent;
+    border-image-source: linear-gradient(135deg, #d10a42 0%, #00359f 100%);
+    border-image-slice: 1;
+
+    a {
+      color: #ffffff;
+      background: linear-gradient(97.05deg, #ed0233 17.6%, #003eb7 95.31%);
+      border: none;
+
+      &:active {
+        background: linear-gradient(97.05deg, #ff0136 17.6%, #014bdc 95.31%);
+      }
+    }
+  }
+
+  @include vp-1199 {
+    margin-bottom: 40px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  @include vp-767 {
+    padding-top: 44px;
+    padding-bottom: 47px;
+    margin-bottom: 35px;
+
+    h3 {
+      font-size: 22px;
+      line-height: 24px;
+    }
+
+    p {
+      margin-bottom: 54px;
+    }
+
+    b {
+      margin-bottom: 29px;
+      margin-left: 4px;
+      font-size: 48px;
+      line-height: 72px;
+
+      &::before {
+        font-size: 80px;
+        line-height: 120px;
+      }
+    }
+
+    svg {
+      width: 24px;
+      height: 33px;
+    }
+
+    a {
+      align-self: stretch;
+      margin-left: 24px;
+      margin-right: 24px;
+    }
+  }
+}
