@@ -119,28 +119,30 @@
         </div>
       </div>
       <div class="gym__video video">
-        <div class="video__preview">
-          <picture>
-            <!-- 1х: 320px; 2x: 640px -->
-            <source type="image/webp" media="(max-width: 767px)" srcset="img/content/video-preview-m@1x.webp 1x, img/content/video-preview-m@2x.webp 2x">
-            <!-- 1х: 266px; 2x: 532px -->
-            <source type="image/webp" media="(max-width: 1199px)" srcset="img/content/video-preview-t@1x.webp 1x, img/content/video-preview-t@2x.webp 2x">
-            <!-- 1х: 364px; 2x: 720px -->
-            <source type="image/webp" srcset="img/content/video-preview-d@1x.webp 1x, img/content/video-preview-d@2x.webp 2x">
-            <!-- 1х: 320px; 2x: 640px -->
-            <source media="(max-width: 767px)" srcset="img/content/video-preview-m@1x.jpg 1x, img/content/video-preview-m@2x.jpg 2x">
-            <!-- 1х: 266px; 2x: 532px -->
-            <source media="(max-width: 1199px)" srcset="img/content/video-preview-t@1x.jpg 1x, img/content/video-preview-t@2x.jpg 2x">
-            <!-- 1х: 364px; 2x: 720px -->
-            <img src="img/content/video-preview-d@1x.jpg" width="364" height="228" alt="Видео о нас." srcset="img/content/video-preview-d@2x.jpg 2x">
-          </picture>
+        <div class="video__container">
+          <div class="video__preview">
+            <picture>
+              <!-- 1х: 320px; 2x: 640px -->
+              <source type="image/webp" media="(max-width: 767px)" srcset="img/content/video-preview-m@1x.webp 1x, img/content/video-preview-m@2x.webp 2x">
+              <!-- 1х: 266px; 2x: 532px -->
+              <source type="image/webp" media="(max-width: 1199px)" srcset="img/content/video-preview-t@1x.webp 1x, img/content/video-preview-t@2x.webp 2x">
+              <!-- 1х: 364px; 2x: 720px -->
+              <source type="image/webp" srcset="img/content/video-preview-d@1x.webp 1x, img/content/video-preview-d@2x.webp 2x">
+              <!-- 1х: 320px; 2x: 640px -->
+              <source media="(max-width: 767px)" srcset="img/content/video-preview-m@1x.jpg 1x, img/content/video-preview-m@2x.jpg 2x">
+              <!-- 1х: 266px; 2x: 532px -->
+              <source media="(max-width: 1199px)" srcset="img/content/video-preview-t@1x.jpg 1x, img/content/video-preview-t@2x.jpg 2x">
+              <!-- 1х: 364px; 2x: 720px -->
+              <img src="img/content/video-preview-d@1x.jpg" width="364" height="228" alt="Видео о нас." srcset="img/content/video-preview-d@2x.jpg 2x">
+            </picture>
+          </div>
+          <a class="video__link-button" href="https://www.youtube.com/embed/9TZXsZItgdw">
+            <span class="visually-hidden">Проиграть видео.</span>
+            <svg width="17" height="17">
+              <use xlink:href="img/sprite_auto.svg#play"></use>
+            </svg>
+          </a>
         </div>
-        <a class="video__link-button" href="https://www.youtube.com/embed/9TZXsZItgdw">
-          <span class="visually-hidden">Проиграть видео.</span>
-          <svg width="17" height="17">
-            <use xlink:href="img/sprite_auto.svg#play"></use>
-          </svg>
-        </a>
       </div>
     </section>
     <section class="tickets">
