@@ -21,6 +21,7 @@ window.addEventListener('DOMContentLoaded', () => {
       const iframe = createIframe(href);
       evt.preventDefault();
       button.remove();
+      video.classList.add('is-playing');
       video.appendChild(iframe);
     });
 
