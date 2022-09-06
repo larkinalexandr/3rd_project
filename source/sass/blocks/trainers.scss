@@ -1,0 +1,105 @@
+.trainers {
+  padding: 0 30px;
+
+  @include vp-767 {
+    padding: 0;
+  }
+}
+
+.trainers__container {
+  margin: 0 auto;
+
+  h2 {
+    max-width: 1160px;
+    margin: 120px auto 50px;
+    font-family: $ff-bebas-neue;
+    font-weight: 700;
+    font-size: 49px;
+    line-height: 49px;
+    color: #102654;
+    letter-spacing: 0.03em;
+  }
+
+  @include vp-1199 {
+    padding: 100px 0;
+    max-width: 566px;
+
+    h2 {
+      margin-top: 0;
+      margin-bottom: 40px;
+      font-size: 42px;
+      line-height: 42px;
+      text-align: center;
+    }
+  }
+
+  @include vp-767 {
+    padding: 70px 0;
+    max-width: 71%;
+
+    h2 {
+      font-size: 32px;
+      line-height: 32px;
+    }
+  }
+}
+
+.trainers__slide-control {
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  padding: 7px;
+  max-width: 1290px;
+  top: 50%;
+  right: -30px;
+  left: -30px;
+  transform: translate(0, -50%);
+
+  @include vp-1199 {
+    right: -61px;
+    left: -61px;
+  }
+
+  @include vp-767 {
+    right: -30px;
+    left: -30px;
+    padding: 0;
+  }
+}
+
+.trainers__cards-wrapper {
+  max-width: 1160px;
+}
+
+.trainers__slider-wrapper {
+  position: relative;
+}
+
+.trainer__next-slide-button,
+.trainer__prev-slide-button {
+  padding: 0;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+
+  svg {
+    fill: none;
+  }
+
+  @include vp-767 {
+    svg {
+      width: 10px;
+      height: 19px;
+    }
+  }
+}
+
+.trainer__prev-slide-button {
+  transform: rotate(180deg);
+}
+
+button[disabled] {
+  opacity: 0.2;
+  cursor: unset;
+}

@@ -1,5 +1,6 @@
 import {iosVhFix} from './utils/ios-vh-fix';
 import {initModals} from './modules/modals/init-modals';
+import {httpProtocol} from "browser-sync/dist/config";
 
 // ---------------------------------
 
@@ -66,6 +67,51 @@ window.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  //  show trainer info
+  const DESKTOP_WIDTH = 1200;
+  const trainerCard = document.querySelectorAll('.trainer-card');
+  const showTrainerInfo = (element, className) => {
+    trainerCard.forEach((el) => el.classList.remove('is-show'));
+    element.classList.add(className);
+  };
+
+  if (trainerCard.length > 0) {
+    trainerCard.forEach((element) => {
+      element.addEventListener('click', () => {
+        if (window.innerWidth < DESKTOP_WIDTH) {
+          if (element.classList.contains('is-show')) {
+            element.classList.remove('is-show');
+          } else {
+            showTrainerInfo(element, 'is-show');
+          }
+        }
+      });
+    });
+  }
+
+  //  slider----------------------
+  const swiper = new Swiper('.mySwiper', {
+
+    navigation: {
+      nextEl: '.trainer__next-slide-button',
+      prevEl: '.trainer__prev-slide-button',
+    },
+
+    breakpoints: {
+      320: {
+        slidesPerView: 1,
+        spaceBetween: 0,
+      },
+      768: {
+        slidesPerView: 2,
+        spaceBetween: 30,
+      },
+      1200: {
+        slidesPerView: 4,
+        spaceBetween: 40,
+      },
+    },
+  });
 
   // ---------------------------------
 
