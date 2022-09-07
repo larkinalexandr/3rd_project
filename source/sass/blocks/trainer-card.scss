@@ -1,0 +1,187 @@
+.trainer-card {
+  position: relative;
+  padding: 0;
+  margin: 35px 0;
+  list-style-type: none;
+  width: 260px;
+  flex-shrink: 0;
+  height: 100%;
+  transition-property: transform;
+
+  @include vp-1199 {
+    width: 268px;
+  }
+
+  @include vp-767 {
+    width: 100%;
+    margin: 0;
+  }
+}
+
+.trainer-card:hover {
+  @media (min-width: 1200px) {
+    &::before {
+      content: "";
+      position: absolute;
+      display: block;
+      width: 100%;
+      height: 100%;
+      box-shadow: 0 0 35px rgba(42, 59, 99, 0.17);
+      transform: matrix(-1, 0, 0, 1, 0, 0);
+    }
+  }
+}
+
+.trainer-card.is-show {
+  @media (min-width: 768px) and (max-width: 1199px) {
+    &::before {
+      content: "";
+      position: absolute;
+      display: block;
+      width: 100%;
+      height: 100%;
+      box-shadow: 0 0 35px rgba(42, 59, 99, 0.17);
+      transform: matrix(-1, 0, 0, 1, 0, 0);
+    }
+  }
+}
+
+.trainer-card__info {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+  padding-top: 51px;
+  bottom: 23px;
+  overflow: scroll;
+
+  h3 {
+    padding: 0 10px;
+    margin: 0;
+    font-family: $ff-roboto-condensed;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 27px;
+    color: #ffffff;
+    text-align: center;
+  }
+
+  span {
+    display: none;
+    margin-top: -3px;
+    margin-bottom: 33px;
+    font-family: $ff-roboto-condensed;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #b6bdcc;
+  }
+
+  ul {
+    display: none;
+    padding: 0;
+    margin: 0 5px 0;
+  }
+
+  li {
+    position: relative;
+    padding: 0;
+    margin: 0 5px 13px 66px;
+    font-family: $ff-roboto-condensed;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 21px;
+    color: #b6bdcc;
+    list-style-type: none;
+
+    &::before {
+      content: ".";
+      font-size: 53px;
+      position: absolute;
+      top: -15px;
+      left: -20px;
+      color: #b6bdcc;
+    }
+  }
+
+  @include vp-1199 {
+    h3 {
+      margin-left: 8px;
+    }
+
+    span {
+      margin-right: 8px;
+    }
+  }
+
+  @include vp-767 {
+    padding-top: 42px;
+
+    h3 {
+      margin-left: 0;
+    }
+
+    span {
+      margin-right: 0;
+    }
+
+    li {
+      margin-left: 46px;
+    }
+  }
+}
+
+.trainer-card:hover .trainer-card__info {
+  @media (min-width: 1200px) {
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(16, 38, 84, 0.89);
+
+    span,
+    ul {
+      display: block;
+    }
+  }
+}
+
+.trainer-card.is-show .trainer-card__info {
+  @include vp-1199 {
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(16, 38, 84, 0.89);
+
+    h3 {
+      margin-left: -8px;
+    }
+
+    span,
+    ul {
+      display: block;
+    }
+  }
+
+  @include vp-767 {
+    h3 {
+      margin-left: 0;
+    }
+  }
+}
+
+.trainer-card__image {
+  @include vp-1199 {
+    img {
+      width: 268px;
+    }
+  }
+
+  @include vp-767 {
+    img {
+      width: 100%;
+    }
+  }
+}

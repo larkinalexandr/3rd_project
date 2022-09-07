@@ -1,9 +1,14 @@
 import {iosVhFix} from './utils/ios-vh-fix';
 import {initModals} from './modules/modals/init-modals';
-
 // ---------------------------------
 
 window.addEventListener('DOMContentLoaded', () => {
+
+  const wrapper = document.querySelector('.wrapper');
+
+  if (wrapper) {
+    wrapper.classList.remove('no-js');
+  }
 
   function findVideos() {
     const videos = document.querySelectorAll('.video');
@@ -63,6 +68,28 @@ window.addEventListener('DOMContentLoaded', () => {
   for (let i = 0; i < tab.length; i++) {
     tab[i].addEventListener('click', () => {
       setActiveTab(i);
+    });
+  }
+
+  //  show trainer info
+  const DESKTOP_WIDTH = 1200;
+  const trainerCard = document.querySelectorAll('.trainer-card');
+  const showTrainerInfo = (element, className) => {
+    trainerCard.forEach((el) => el.classList.remove('is-show'));
+    element.classList.add(className);
+  };
+
+  if (trainerCard.length > 0) {
+    trainerCard.forEach((element) => {
+      element.addEventListener('click', () => {
+        if (window.innerWidth < DESKTOP_WIDTH) {
+          if (element.classList.contains('is-show')) {
+            element.classList.remove('is-show');
+          } else {
+            showTrainerInfo(element, 'is-show');
+          }
+        }
+      });
     });
   }
 
