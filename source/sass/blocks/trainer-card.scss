@@ -4,6 +4,9 @@
   margin: 35px 0;
   list-style-type: none;
   width: 260px;
+  flex-shrink: 0;
+  height: 100%;
+  transition-property: transform;
 
   @include vp-1199 {
     width: 268px;
@@ -12,23 +15,6 @@
   @include vp-767 {
     width: 100%;
     margin: 0;
-  }
-}
-
-.trainers__cards-list {
-  padding: 0;
-  margin: 0;
-}
-
-.trainer-card__info {
-  width: 260px;
-
-  @include vp-1199 {
-    width: 268px;
-  }
-
-  @include vp-767 {
-    width: 100%;
   }
 }
 
@@ -64,6 +50,7 @@
   position: absolute;
   display: flex;
   flex-direction: column;
+  width: 100%;
   align-items: center;
   padding-top: 51px;
   bottom: 23px;
@@ -115,7 +102,6 @@
       top: -15px;
       left: -20px;
       color: #b6bdcc;
-
     }
   }
 
@@ -138,7 +124,6 @@
 
     span {
       margin-right: 0;
-
     }
 
     li {
@@ -188,10 +173,6 @@
 }
 
 .trainer-card__image {
-  img {
-    width: 260px;
-  }
-
   @include vp-1199 {
     img {
       width: 268px;
@@ -204,5 +185,3 @@
     }
   }
 }
-
-

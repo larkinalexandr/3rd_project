@@ -1,12 +1,9 @@
-.trainers {
-  padding: 0 30px;
-
-  @include vp-767 {
-    padding: 0;
-  }
+.no-js .trainers {
+  display: none;
 }
 
 .trainers__container {
+  padding: 0 30px;
   margin: 0 auto;
 
   h2 {
@@ -73,10 +70,16 @@
   }
 }
 
-.trainers__cards-wrapper.swiper {
+.trainers__cards-wrapper {
   max-width: 1230px;
   padding-right: 35px;
   padding-left: 35px;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  overflow: hidden;
+  list-style: none;
+  z-index: 1;
 
   @include vp-1199 {
     padding-right: 30px;
@@ -93,12 +96,15 @@
   position: relative;
 }
 
-.trainer__next-slide-button,
-.trainer__prev-slide-button {
+.trainers__slide-button {
   padding: 0;
   border: none;
   background: transparent;
   cursor: pointer;
+
+  &--prev {
+    transform: rotate(180deg);
+  }
 
   svg {
     fill: none;
@@ -108,7 +114,7 @@
   &:focus-visible {
     svg {
       fill: $color-default-black;
-      stroke: $color-default-black;;
+      stroke: $color-default-black;
     }
   }
 
@@ -120,11 +126,7 @@
   }
 }
 
-.trainer__prev-slide-button {
-  transform: rotate(180deg);
-}
-
-button[disabled] {
+.trainers__slide-button[disabled] {
   opacity: 0.2;
   cursor: unset;
 
@@ -135,4 +137,17 @@ button[disabled] {
       stroke: #afafaf;
     }
   }
+}
+
+.trainers__cards-list {
+  position: relative;
+  display: flex;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+
+  transition-property: transform;
+  box-sizing: content-box;
 }

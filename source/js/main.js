@@ -1,10 +1,14 @@
 import {iosVhFix} from './utils/ios-vh-fix';
 import {initModals} from './modules/modals/init-modals';
-import {httpProtocol} from "browser-sync/dist/config";
-
 // ---------------------------------
 
 window.addEventListener('DOMContentLoaded', () => {
+
+  const wrapper = document.querySelector('.wrapper');
+
+  if (wrapper) {
+    wrapper.classList.remove('no-js');
+  }
 
   function findVideos() {
     const videos = document.querySelectorAll('.video');
@@ -89,29 +93,6 @@ window.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  //  slider----------------------
-  const swiper = new Swiper('.mySwiper', {
-
-    navigation: {
-      nextEl: '.trainer__next-slide-button',
-      prevEl: '.trainer__prev-slide-button',
-    },
-
-    breakpoints: {
-      320: {
-        slidesPerView: 1,
-        spaceBetween: 0,
-      },
-      768: {
-        slidesPerView: 2,
-        spaceBetween: 30,
-      },
-      1200: {
-        slidesPerView: 4,
-        spaceBetween: 40,
-      },
-    },
-  });
 
   // ---------------------------------
 
