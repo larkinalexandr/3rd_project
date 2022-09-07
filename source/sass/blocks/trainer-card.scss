@@ -1,7 +1,7 @@
 .trainer-card {
   position: relative;
   padding: 0;
-  margin: 0;
+  margin: 35px 0;
   list-style-type: none;
   width: 260px;
 
@@ -11,6 +11,7 @@
 
   @include vp-767 {
     width: 100%;
+    margin: 0;
   }
 }
 
@@ -31,41 +32,56 @@
   }
 }
 
-.trainer-card:hover .trainer-card__info {
+.trainer-card:hover {
   @media (min-width: 1200px) {
-    display: flex;
+    &::before {
+      content: "";
+      position: absolute;
+      display: block;
+      width: 100%;
+      height: 100%;
+      box-shadow: 0 0 35px rgba(42, 59, 99, 0.17);
+      transform: matrix(-1, 0, 0, 1, 0, 0);
+    }
   }
 }
 
-.trainer-card.is-show .trainer-card__info {
-  @include vp-1199 {
-    display: flex;
+.trainer-card.is-show {
+  @media (min-width: 768px) and (max-width: 1199px) {
+    &::before {
+      content: "";
+      position: absolute;
+      display: block;
+      width: 100%;
+      height: 100%;
+      box-shadow: 0 0 35px rgba(42, 59, 99, 0.17);
+      transform: matrix(-1, 0, 0, 1, 0, 0);
+    }
   }
 }
 
 .trainer-card__info {
   position: absolute;
-  display: none;
+  display: flex;
   flex-direction: column;
   align-items: center;
   padding-top: 51px;
-  bottom: 0;
-  top: 0;
-  right: 0;
-  left: 0;
-  background-color: rgba(16, 38, 84, 0.89);
+  bottom: 23px;
   overflow: scroll;
 
   h3 {
+    padding: 0 10px;
     margin: 0;
     font-family: $ff-roboto-condensed;
     font-weight: 700;
     font-size: 18px;
     line-height: 27px;
     color: #ffffff;
+    text-align: center;
   }
 
   span {
+    display: none;
     margin-top: -3px;
     margin-bottom: 33px;
     font-family: $ff-roboto-condensed;
@@ -76,6 +92,7 @@
   }
 
   ul {
+    display: none;
     padding: 0;
     margin: 0 5px 0;
   }
@@ -103,7 +120,10 @@
   }
 
   @include vp-1199 {
-    h3,
+    h3 {
+      margin-left: 8px;
+    }
+
     span {
       margin-right: 8px;
     }
@@ -112,13 +132,57 @@
   @include vp-767 {
     padding-top: 42px;
 
-    h3,
+    h3 {
+      margin-left: 0;
+    }
+
     span {
       margin-right: 0;
+
     }
 
     li {
       margin-left: 46px;
+    }
+  }
+}
+
+.trainer-card:hover .trainer-card__info {
+  @media (min-width: 1200px) {
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(16, 38, 84, 0.89);
+
+    span,
+    ul {
+      display: block;
+    }
+  }
+}
+
+.trainer-card.is-show .trainer-card__info {
+  @include vp-1199 {
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(16, 38, 84, 0.89);
+
+    h3 {
+      margin-left: -8px;
+    }
+
+    span,
+    ul {
+      display: block;
+    }
+  }
+
+  @include vp-767 {
+    h3 {
+      margin-left: 0;
     }
   }
 }
