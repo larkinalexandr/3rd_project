@@ -2,8 +2,9 @@
   display: none;
 }
 
+
 .trainers__container {
-  padding: 0 30px;
+  padding: 0 30px 85px;
   margin: 0 auto;
 
   h2 {
@@ -19,7 +20,7 @@
   }
 
   @include vp-1199 {
-    padding: 100px 0;
+    padding: 100px 0 65px;
     max-width: 626px;
 
     h2 {
