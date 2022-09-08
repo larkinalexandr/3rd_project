@@ -23,3 +23,30 @@
   max-width: $max-width;
   margin: 0 auto;
 }
+
+@mixin h2-desktop {
+  font-family: $ff-bebas-neue;
+  font-weight: 700;
+  font-size: 49px;
+  line-height: 49px;
+  color: #102654;
+  letter-spacing: 0.03em;
+}
+
+@mixin h2-tablet {
+  font-family: $ff-bebas-neue;
+  font-weight: 700;
+  font-size: 42px;
+  line-height: 42px;
+  color: #102654;
+  letter-spacing: 0.03em;
+}
+
+@mixin h2-mobile {
+  font-family: $ff-bebas-neue;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 32px;
+  color: #102654;
+  letter-spacing: 0.03em;
+}
