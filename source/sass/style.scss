@@ -2,7 +2,6 @@
 // ---------------------------------
 
 @import "vendor/normalize";
-//@import "vendor/swiper";
 
 // Global
 // ---------------------------------
@@ -28,6 +27,8 @@
 @import "blocks/trainer-card";
 @import "blocks/advantages";
 @import "blocks/promo";
+@import "blocks/reviews";
+@import "blocks/review-card";
 // ---------------------------------
 
 // ❗❗❗ запрещено использовать изображения в css, касается как jpg \ png, так и svg

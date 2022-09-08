@@ -7,8 +7,8 @@ import './vendor/swiper';
 new Swiper('.swiper--trainers', {
 
   navigation: {
-    nextEl: '.trainers__next-slide-button',
-    prevEl: '.trainers__prev-slide-button',
+    nextEl: '.trainers__slide-button--next',
+    prevEl: '.trainers__slide-button--prev',
   },
 
   breakpoints: {
@@ -25,4 +25,14 @@ new Swiper('.swiper--trainers', {
       spaceBetween: 40,
     },
   },
+});
+
+new Swiper('.swiper--reviews', {
+
+  navigation: {
+    nextEl: '.reviews__slide-button--next',
+    prevEl: '.reviews__slide-button--prev',
+  },
+
+  spaceBetween: 80,
 });
