@@ -35,6 +35,10 @@
   <link href="./pixel-glass/styles.css" rel="stylesheet">
   <script src="./pixel-glass/script.js"></script>
   <!-- // Pixel Glass -->
+  <!--  <link-->
+  <!--    rel="stylesheet"-->
+  <!--    href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"-->
+  <!--  />-->
 
 </head>
 <body>
@@ -318,7 +322,7 @@
               </svg>
             </button>
           </div>
-          <div class="trainers__cards-wrapper swiper swiper--trainers">
+          <div class="trainers__cards-wrapper swiper--trainers">
             <ul class="trainers__cards-list swiper-wrapper">
               <li class="trainer-card swiper-slide">
                 <div class="trainer-card__image">
@@ -632,8 +636,84 @@
         </div>
         <div class="promo__description">
           <h3>Скидка 20%</h3>
-          <p>Корпоративный фитнес  с командой</p>
+          <p>Корпоративный фитнес с командой</p>
           <a>подробнее</a>
+        </div>
+      </div>
+    </section>
+    <section class="reviews">
+      <div class="reviews__container">
+        <h2>Отзывы</h2>
+        <div class="reviews__slider-wrapper">
+          <div class="reviews__slide-control">
+            <button class="reviews__slide-button reviews__slide-button--prev">
+              <span class="visually-hidden">К предыдущему отзыву.</span>
+              <svg width="16" height="32">
+                <use xlink:href="img/sprite_auto.svg#arrow-r"></use>
+              </svg>
+            </button>
+            <button class="reviews__slide-button reviews__slide-button--next">
+              <span class="visually-hidden">К следующнму отзыву.</span>
+              <svg width="16" height="32">
+                <use xlink:href="img/sprite_auto.svg#arrow-r"></use>
+              </svg>
+            </button>
+          </div>
+          <div class="reviews__cards-wrapper swiper swiper--reviews">
+            <ul class="reviews__cards-list swiper-wrapper">
+              <li class="review-card swiper-slide">
+                <div class="review-card__image">
+                  <picture>
+                    <!-- 1х: 68px; 2x: 136px -->
+                    <source type="image/webp" media="(max-width: 767px)" srcset="img/content/review-a-m@1x.webp 1x, img/content/review-a-m@2x.webp 2x">
+                    <!-- 1х: 80px; 2x: 160px -->
+                    <source type="image/webp" srcset="img/content/review-a-d@1x.webp, img/content/review-a-d@2x.webp 2x">
+                    <!-- 1х: 68px; 2x: 136px -->
+                    <source media="(max-width: 767px)" srcset="img/content/review-a-m@1x.jpg 1x, img/content/review-a-m@2x.jpg 2x">
+                    <!-- 1х: 80px; 2x: 160px -->
+                    <img src="img/content/review-a-d@1x.jpg" width="80" height="80" alt="Наш тренер - ." srcset="img/content/review-a-d@2x.jpg 2x">
+                  </picture>
+                </div>
+                <h3>Анна Орлова</h3>
+                <p>«Хожу в SuperClub уже больше года. Нравится, что в клубе всегда чисто, тренажеры обновляют, персонал
+                  дружелюбный. Зал просторный, даже в вечернее время нет очередей»</p>
+              </li>
+              <li class="review-card swiper-slide">
+                <div class="review-card__image">
+                  <picture>
+                    <!-- 1х: 68px; 2x: 136px -->
+                    <source type="image/webp" media="(max-width: 767px)" srcset="img/content/review-b-m@1x.webp 1x, img/content/review-b-m@2x.webp 2x">
+                    <!-- 1х: 80px; 2x: 160px -->
+                    <source type="image/webp" srcset="img/content/review-b-d@1x.webp, img/content/review-b-d@2x.webp 2x">
+                    <!-- 1х: 68px; 2x: 136px -->
+                    <source media="(max-width: 767px)" srcset="img/content/review-b-m@1x.jpg 1x, img/content/review-b-m@2x.jpg 2x">
+                    <!-- 1х: 80px; 2x: 160px -->
+                    <img src="img/content/review-b-d@1x.jpg" width="80" height="80" alt="Наш тренер - ." srcset="img/content/review-b-d@2x.jpg 2x">
+                  </picture>
+                </div>
+                <h3>Анна Соколова</h3>
+                <p>«Хожу в SuperClub уже больше года. Нравится, что в клубе всегда чисто, тренажеры обновляют, персонал
+                  дружелюбный. Зал просторный, даже в вечернее время нет очередей»</p>
+              </li>
+              <li class="review-card swiper-slide">
+                <div class="review-card__image">
+                  <picture>
+                    <!-- 1х: 68px; 2x: 136px -->
+                    <source type="image/webp" media="(max-width: 767px)" srcset="img/content/review-c-m@1x.webp 1x, img/content/review-c-m@2x.webp 2x">
+                    <!-- 1х: 80px; 2x: 160px -->
+                    <source type="image/webp" srcset="img/content/review-c-d@1x.webp, img/content/review-c-d@2x.webp 2x">
+                    <!-- 1х: 68px; 2x: 136px -->
+                    <source media="(max-width: 767px)" srcset="img/content/review-c-m@1x.jpg 1x, img/content/review-c-m@2x.jpg 2x">
+                    <!-- 1х: 80px; 2x: 160px -->
+                    <img src="img/content/review-c-d@1x.jpg" width="80" height="80" alt="Наш тренер - ." srcset="img/content/review-c-d@2x.jpg 2x">
+                  </picture>
+                </div>
+                <h3>Анна Снегирева</h3>
+                <p>«Хожу в SuperClub уже больше года. Нравится, что в клубе всегда чисто, тренажеры обновляют, персонал
+                  дружелюбный. Зал просторный, даже в вечернее время нет очередей»</p>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
     </section>
