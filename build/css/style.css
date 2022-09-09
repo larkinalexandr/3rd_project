@@ -2118,6 +2118,16 @@ button,
   user-select: none;
 }
 
+.promo__offer a:hover,
+.promo__offer a:focus-visible {
+  color: #0676f5;
+  border-bottom: 1px solid #0676f5;
+}
+
+.promo__offer a:active {
+  opacity: 0.7;
+}
+
 .promo__description {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2166,6 +2176,16 @@ button,
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+}
+
+.promo__description a:hover,
+.promo__description a:focus-visible {
+  color: #c90606;
+  border-bottom: 1px solid #c90606;
+}
+
+.promo__description a:active {
+  opacity: 0.7;
 }
 
 .no-js .reviews {
