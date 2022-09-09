@@ -2031,6 +2031,10 @@ button,
   text-align: center;
 }
 
+.promo {
+  margin-bottom: 50px;
+}
+
 .promo h2 {
   font-family: "Bebas Neue", "Arial", sans-serif;
   font-weight: 700;
@@ -2193,7 +2197,7 @@ button,
 }
 
 .reviews__container {
-  padding: 120px 30px 80px;
+  padding: 70px 30px 80px;
   margin: 0 auto;
 }
 
@@ -3205,6 +3209,7 @@ button,
 
   .promo {
     padding: 0 45px;
+    margin-bottom: 30px;
   }
 
   .promo h2 {
@@ -3240,7 +3245,7 @@ button,
   }
 
   .reviews__container {
-    padding-top: 101px;
+    padding-top: 71px;
     padding-bottom: 59px;
   }
 
@@ -3792,6 +3797,7 @@ button,
 
   .promo {
     padding: 0 15px;
+    margin-bottom: 0;
   }
 
   .promo h2 {
