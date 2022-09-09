@@ -4,26 +4,20 @@
 
 .tickets__container {
   @include container;
-  padding: 120px 65px;
+  padding: 120px 0;
 
   h2 {
+    @include h2-desktop;
     margin: 0 0 33px;
-    font-family: $ff-bebas-neue;
-    font-size: 49px;
-    font-weight: 700;
-    line-height: 49px;
-    letter-spacing: 0.03em;
     text-align: center;
-    text-transform: uppercase;
   }
 
   @include vp-1199 {
     padding: 101px 163px;
 
     h2 {
+      @include h2-tablet;
       margin-bottom: 28px;
-      font-size: 42px;
-      line-height: 42px;
     }
   }
 
@@ -31,9 +25,8 @@
     padding: 70px 15px;
 
     h2 {
+      @include h2-mobile;
       margin-bottom: 20px;
-      font-size: 32px;
-      line-height: 32px;
     }
   }
 }

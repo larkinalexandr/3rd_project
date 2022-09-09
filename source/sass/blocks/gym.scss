@@ -2,7 +2,7 @@
   @include container;
   display: flex;
   justify-content: space-between;
-  padding: 120px 65px 7px;
+  padding: 120px 0 7px;
 
   @include vp-1199 {
     flex-direction: column;
@@ -23,12 +23,8 @@
   color: #102654;
 
   h2 {
+    @include h2-desktop;
     margin: 0 0 5px;
-    font-family: $ff-bebas-neue;
-    font-weight: 700;
-    font-size: 49px;
-    line-height: 49px;
-    letter-spacing: 0.03em;
   }
 
   span {
@@ -52,9 +48,8 @@
     max-width: unset;
 
     h2 {
+      @include h2-tablet;
       margin-bottom: 7px;
-      font-size: 42px;
-      line-height: 42px;
       text-align: center;
     }
 
@@ -78,11 +73,10 @@
     margin-bottom: 33px;
 
     h2 {
+      @include h2-mobile;
       padding-right: 15px;
       padding-left: 15px;
       margin-bottom: 4px;
-      font-size: 32px;
-      line-height: 32px;
       text-align: unset;
     }
 
