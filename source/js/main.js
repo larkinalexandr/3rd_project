@@ -3,18 +3,22 @@ import {initModals} from './modules/modals/init-modals';
 // ---------------------------------
 
 window.addEventListener('DOMContentLoaded', () => {
-
+  //  Удаление класса no-js
   const wrapper = document.querySelector('.wrapper');
 
   if (wrapper) {
     wrapper.classList.remove('no-js');
   }
+  //  ---------------------------------
 
+  //  Видео YouTube
   function findVideos() {
     const videos = document.querySelectorAll('.video');
 
-    for (let i = 0; i < videos.length; i++) {
-      setupVideo(videos[i]);
+    if (videos.length > 0) {
+      for (let i = 0; i < videos.length; i++) {
+        setupVideo(videos[i]);
+      }
     }
   }
 
@@ -22,12 +26,22 @@ window.addEventListener('DOMContentLoaded', () => {
     const button = video.querySelector('.video__link-button');
     const href = button.href;
 
-    button.addEventListener('click', (evt) => {
+    const startVideo = (evt) => {
       const iframe = createIframe(href);
       evt.preventDefault();
       button.remove();
       video.classList.add('is-playing');
       video.appendChild(iframe);
+    };
+
+    button.addEventListener('click', (evt) => {
+      startVideo(evt);
+    });
+
+    button.addEventListener('keydown', (evt) => {
+      if (evt.key === 'Enter') {
+        startVideo(evt);
+      }
     });
 
     button.removeAttribute('href');
@@ -50,44 +64,59 @@ window.addEventListener('DOMContentLoaded', () => {
   }
 
   findVideos();
+  //  ---------------------------------
 
-  // Utils
-
-  const tabs = document.querySelector('.tabs__title-list');
+  // Tabs
+  const tabsTitleList = document.querySelector('.tabs__title-list');
+  const tabTitle = tabsTitleList.querySelectorAll('li');
   const tabsContent = document.querySelector('.tabs__content');
-  const tab = tabs.querySelectorAll('li');
-  const tabContent = tabsContent.querySelectorAll('ul');
+  const tabsContentList = tabsContent.querySelectorAll('ul');
 
-  const setActiveTab = (index) => {
-    tab.forEach((element) => element.classList.remove('is-active'));
-    tabContent.forEach((element) => element.classList.remove('is-active'));
-    tab[index].classList.add('is-active');
-    tabContent[index].classList.add('is-active');
-  };
+  if (tabsTitleList && tabsContent && tabTitle.length > 0 && tabsContentList.length > 0) {
+    const setActiveTab = (index) => {
+      tabTitle.forEach((element) => element.classList.remove('is-active'));
+      tabsContentList.forEach((element) => element.classList.remove('is-active'));
+      tabTitle[index].classList.add('is-active');
+      tabsContentList[index].classList.add('is-active');
+    };
 
-  for (let i = 0; i < tab.length; i++) {
-    tab[i].addEventListener('click', () => {
-      setActiveTab(i);
-    });
+    for (let i = 0; i < tabTitle.length; i++) {
+      tabTitle[i].addEventListener('click', () => {
+        setActiveTab(i);
+      });
+    }
   }
+  //  ---------------------------------
 
-  //  show trainer info
+
+  //  Открывает информацию о тренере по клику и нажатию на 'Enter'
   const DESKTOP_WIDTH = 1200;
   const trainerCard = document.querySelectorAll('.trainer-card');
+
   const showTrainerInfo = (element, className) => {
     trainerCard.forEach((el) => el.classList.remove('is-show'));
     element.classList.add(className);
   };
 
+  const setTrainerInfo = (element) => {
+    if (window.innerWidth < DESKTOP_WIDTH) {
+      if (element.classList.contains('is-show')) {
+        element.classList.remove('is-show');
+      } else {
+        showTrainerInfo(element, 'is-show');
+      }
+    }
+  };
+
   if (trainerCard.length > 0) {
     trainerCard.forEach((element) => {
       element.addEventListener('click', () => {
-        if (window.innerWidth < DESKTOP_WIDTH) {
-          if (element.classList.contains('is-show')) {
-            element.classList.remove('is-show');
-          } else {
-            showTrainerInfo(element, 'is-show');
-          }
+        setTrainerInfo(element);
+      });
+
+      element.addEventListener('keydown', (evt) => {
+        if (evt.key === 'Enter') {
+          setTrainerInfo(element);
         }
       });
     });
