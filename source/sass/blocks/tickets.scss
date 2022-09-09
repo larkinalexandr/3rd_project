@@ -1,5 +1,39 @@
 .tickets {
   background-color: #f8f9fc;
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 287px;
+    height: 494px;
+    bottom: -150px;
+    right: 0;
+    background-image: url("/img/barbell-d@1x.png");
+    background-repeat: no-repeat;
+    background-size: 287px;
+    z-index: 1;
+
+    @media (min-width: 1200px) and (min-resolution: 2dppx) {
+      background-image: url("/img/barbell-d@2x.png");
+    }
+
+    @include vp-1199 {
+      height: 444px;
+      width: 347px;
+      background-size: 347px;
+      bottom: -124px;
+      background-image: url("/img/barbell-t@1x.png");
+
+      @include retina {
+        background-image: url("/img/barbell-t@2x.png");
+      }
+    }
+
+    @include vp-767 {
+      display: none;
+    }
+  }
 }
 
 .tickets__container {
