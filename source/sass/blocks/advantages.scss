@@ -128,6 +128,12 @@
 
 .advantages__item--comfort .advantages__description {
   margin-bottom: -4px;
+
+  p {
+    @include vp-767 {
+      padding: 0 47px;
+    }
+  }
 }
 
 .advantages__item--experience .advantages__qty {
