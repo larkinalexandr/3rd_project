@@ -15,8 +15,6 @@
 }
 
 .contacts__form-wrapper {
-  outline: 1px solid red;
-  outline-offset: -1px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -147,9 +145,6 @@
 }
 
 .contacts__info-wrapper {
-  outline: 1px solid red;
-  outline-offset: -1px;
-
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -165,6 +160,7 @@
     align-items: flex-start;
     padding-left: 15px;
     padding-right: 15px;
+    padding-bottom: 44px;
   }
 }
 
@@ -185,9 +181,10 @@
     row-gap: 31px;
     margin-right: 57px;
     margin-left: 10px;
+
     h2 {
+      @include h2-tablet;
       margin: 0;
-      @include h2-tablet
     }
   }
 
@@ -233,6 +230,7 @@
 
   @include vp-767 {
     margin-bottom: 20px;
+
     &--left {
       padding-right: 0;
       border-right: none;
@@ -267,7 +265,7 @@
 
     &:hover,
     &:focus-visible {
-      transform: scale(1.2);
+      transform: scale(1.1);
     }
 
     &:active {
@@ -292,11 +290,11 @@
   @include vp-1199 {
     margin-bottom: 20px;
 
-      b {
-        margin-bottom: 5px;
-        font-size: 20px;
-        line-height: 30px;
-      }
+    b {
+      margin-bottom: 5px;
+      font-size: 20px;
+      line-height: 30px;
+    }
 
     p,
     address,
