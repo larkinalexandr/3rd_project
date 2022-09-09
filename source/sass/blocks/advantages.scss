@@ -11,22 +11,16 @@
   align-items: center;
 
   h2 {
+    @include h2-desktop;
     margin: 0 0 68px;
-    font-family: $ff-bebas-neue;
-    font-weight: 700;
-    font-size: 49px;
-    line-height: 49px;
-    letter-spacing: 0.03em;
-    color: #102654;
   }
 
   @include vp-1199 {
     padding: 101px 45px 97px;
 
     h2 {
+      @include h2-tablet;
       margin-bottom: 48px;
-      font-size: 42px;
-      line-height: 42px;
     }
   }
 
@@ -34,9 +28,8 @@
     padding: 71px 0 0;
 
     h2 {
+      @include h2-mobile;
       margin-bottom: 50px;
-      font-size: 32px;
-      line-height: 32px;
     }
   }
 }
@@ -135,6 +128,12 @@
 
 .advantages__item--comfort .advantages__description {
   margin-bottom: -4px;
+
+  p {
+    @include vp-767 {
+      padding: 0 47px;
+    }
+  }
 }
 
 .advantages__item--experience .advantages__qty {

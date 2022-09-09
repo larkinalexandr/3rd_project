@@ -18,7 +18,8 @@
   }
 }
 
-.trainer-card:hover {
+.trainer-card:hover,
+.trainer-card:focus-visible {
   @media (min-width: 1200px) {
     &::before {
       content: "";
@@ -132,7 +133,8 @@
   }
 }
 
-.trainer-card:hover .trainer-card__info {
+.trainer-card:hover .trainer-card__info,
+.trainer-card:focus-visible .trainer-card__info {
   @media (min-width: 1200px) {
     top: 0;
     right: 0;

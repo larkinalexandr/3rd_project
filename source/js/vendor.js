@@ -4,7 +4,7 @@ import './vendor/swiper';
 /* eslint-disable no-new */
 /* eslint-disable no-undef */
 
-new Swiper('.swiper--trainers', {
+new Swiper('.trainers__swiper', {
 
   navigation: {
     nextEl: '.trainers__slide-button--next',
@@ -27,7 +27,7 @@ new Swiper('.swiper--trainers', {
   },
 });
 
-new Swiper('.swiper--reviews', {
+new Swiper('.reviews__swiper', {
 
   navigation: {
     nextEl: '.reviews__slide-button--next',

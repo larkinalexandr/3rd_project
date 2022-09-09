@@ -2,7 +2,7 @@
   @include container;
   display: grid;
   grid-template-columns: 1fr 660px;
-  padding: 120px 65px 0;
+  padding: 120px 0 0;
 
   @include vp-1199 {
     grid-template-columns: 1fr 386px;

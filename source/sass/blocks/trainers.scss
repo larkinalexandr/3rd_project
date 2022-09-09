@@ -2,21 +2,15 @@
   display: none;
 }
 
-
 .trainers__container {
   padding: 0 30px 85px;
   margin: 0 auto;
 
   h2 {
+    @include h2-desktop;
     max-width: 1230px;
     padding-left: 37px;
     margin: 120px auto 15px;
-    font-family: $ff-bebas-neue;
-    font-weight: 700;
-    font-size: 49px;
-    line-height: 49px;
-    color: #102654;
-    letter-spacing: 0.03em;
   }
 
   @include vp-1199 {
@@ -24,11 +18,10 @@
     max-width: 626px;
 
     h2 {
+      @include h2-tablet;
       padding-left: 0;
       margin-top: 0;
       margin-bottom: 5px;
-      font-size: 42px;
-      line-height: 42px;
       text-align: center;
     }
   }
@@ -38,9 +31,8 @@
     max-width: 71%;
 
     h2 {
+      @include h2-mobile;
       margin-bottom: 40px;
-      font-size: 32px;
-      line-height: 32px;
     }
   }
 }

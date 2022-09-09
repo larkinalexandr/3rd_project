@@ -8,8 +8,6 @@
 
 .header__container {
   @include container;
-  padding-right: 66px;
-  padding-left: 64px;
 
   @include vp-1199 {
     padding-left: 44px;
