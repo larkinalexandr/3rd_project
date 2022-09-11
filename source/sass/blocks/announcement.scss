@@ -5,14 +5,16 @@
   padding: 120px 0 0;
 
   @include vp-1199 {
-    grid-template-columns: 1fr 386px;
-    padding: 99px 45px 0;
+    grid-template-columns: 43% 57%;
+    padding-top: 99px;
+    width: 88.28%;
   }
 
   @include vp-767 {
     display: flex;
     flex-direction: column;
     padding: 70px 15px 0;
+    width: 100%;
   }
 }
 
@@ -20,6 +22,7 @@
   background-color: #ed0233;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   color: #ffffff;
 
   > p {
@@ -81,6 +84,7 @@
   }
 
   @include vp-767 {
+    padding-top: 51px;
     padding-bottom: 50px;
 
     > a {
@@ -94,7 +98,7 @@
 .announcement__text {
   max-width: 340px;
   display: flex;
-  margin: 80px auto 4px;
+  margin: 0 auto 4px;
 
   h2 {
     margin: 7px 48px 0 0;
@@ -106,7 +110,7 @@
   }
 
   @include vp-1199 {
-    margin-top: 44px;
+    margin-top: -7px;
     margin-bottom: 0;
 
     h2 {

@@ -11,7 +11,7 @@
   <link rel="stylesheet" href="css/style.min.css">
 </head>
 <body>
-<div class="wrapper no-js">
+<div class="wrapper no-js" data-element="wrapper">
   <header class="header">
     <div class="header__container">
       <div class="header__top-wrapper">
@@ -25,19 +25,19 @@
         </div>
       </div>
       <div class="header__bottom greeting">
-        <div class="greeting__description">
+        <div class="greeting__text">
           <div class="greeting__description-wrapper">
-            <ul>
-              <li>Тренажёрный зал</li>
-              <li>Групповые занятия</li>
-              <li>Кардио-зона</li>
-            </ul>
-            <div class="greeting__title-wrapper">
+            <div class="greeting__description">
               <p>Омск</p>
               <h1>Фитнес центр<span class="visually-hidden">Supergym</span></h1>
+              <ul>
+                <li>Тренажёрный зал</li>
+                <li>Групповые занятия</li>
+                <li>Кардио-зона</li>
+              </ul>
             </div>
+            <a class="greeting__button button" href="#tickets">Купить абонемент</a>
           </div>
-          <a class="greeting__button button" href="#tickets">Купить абонемент</a>
         </div>
         <div class="greeting__image">
           <picture>
@@ -90,7 +90,7 @@
           </picture>
         </div>
       </div>
-      <div class="gym__video video">
+      <div class="gym__video video" data-element="video">
         <div class="video__container">
           <div class="video__preview">
             <picture>
@@ -108,7 +108,7 @@
               <img src="img/content/video-preview-d@1x.jpg" width="364" height="228" alt="Видео о нас." srcset="img/content/video-preview-d@2x.jpg 2x">
             </picture>
           </div>
-          <a class="video__link-button" tabindex="0" href="https://www.youtube.com/embed/9TZXsZItgdw">
+          <a class="video__link-button" data-element="video--link-button" tabindex="0" href="https://www.youtube.com/embed/9TZXsZItgdw">
             <span class="visually-hidden">Проиграть видео.</span>
             <svg width="17" height="17">
               <use xlink:href="img/sprite_auto.svg#play"></use>
@@ -122,7 +122,7 @@
         <h2 class="tickets__title">Абонементы</h2>
         <div class="tickets__tabs tabs">
           <div class="tabs__header">
-            <ul class="tabs__title-list">
+            <ul class="tabs__title-list" data-element="tabs-title-list">
               <li class="is-active">
                 <button type="button">1 месяц</button>
               </li>
@@ -134,7 +134,7 @@
               </li>
             </ul>
           </div>
-          <div class="tabs__content">
+          <div class="tabs__content" data-element="tabs-content">
             <ul class="is-active">
               <li class="tabs__content-item">
                 <h3>С тренером</h3>
@@ -278,13 +278,13 @@
         <h2>Тренеры</h2>
         <div class="trainers__slider-wrapper">
           <div class="trainers__slide-control">
-            <button class="trainers__slide-button trainers__slide-button--prev">
+            <button class="trainers__slide-button trainers__slide-button--prev slide-button">
               <span class="visually-hidden">К предыдущему слайду.</span>
               <svg width="16" height="32" aria-hidden="true" focusable="false">
                 <use xlink:href="img/sprite_auto.svg#arrow-r"></use>
               </svg>
             </button>
-            <button class="trainers__slide-button trainers__slide-button--next">
+            <button class="trainers__slide-button trainers__slide-button--next slide-button">
               <span class="visually-hidden">К следующнму слайду.</span>
               <svg width="16" height="32" aria-hidden="true" focusable="false">
                 <use xlink:href="img/sprite_auto.svg#arrow-r"></use>
@@ -293,7 +293,7 @@
           </div>
           <div class="trainers__cards-wrapper trainers__swiper">
             <ul class="trainers__cards-list swiper-wrapper">
-              <li class="trainer-card swiper-slide" tabindex="0">
+              <li class="trainer-card swiper-slide" data-element="trainer-card" tabindex="0">
                 <div class="trainer-card__image">
                   <picture>
                     <!-- 1х: 226px; 2x: 452px -->
@@ -307,7 +307,7 @@
                     <!-- 1х: 268px; 2x: 536px -->
                     <source media="(max-width: 1199px)" srcset="img/content/trainer-a-t@1x.jpg 1x, img/content/trainer-a-t@2x.jpg 2x">
                     <!-- 1х: 260px; 2x: 520px -->
-                    <img src="img/content/trainer-a-d@1x.jpg" width="260" height="520" alt="Наш тренер -  Анна." srcset="img/content/trainer-a-d@2x.jpg 2x">
+                    <img src="img/content/trainer-a-d@1x.jpg" width="260" height="294" alt="Наш тренер -  Анна." srcset="img/content/trainer-a-d@2x.jpg 2x">
                   </picture>
                 </div>
                 <div class="trainer-card__info">
@@ -320,7 +320,7 @@
                   </ul>
                 </div>
               </li>
-              <li class="trainer-card swiper-slide" tabindex="0">
+              <li class="trainer-card swiper-slide" data-element="trainer-card" tabindex="0">
                 <div class="trainer-card__image">
                   <picture>
                     <!-- 1х: 226px; 2x: 452px -->
@@ -334,7 +334,7 @@
                     <!-- 1х: 268px; 2x: 536px -->
                     <source media="(max-width: 1199px)" srcset="img/content/trainer-b-t@1x.jpg 1x, img/content/trainer-b-t@2x.jpg 2x">
                     <!-- 1х: 260px; 2x: 520px -->
-                    <img src="img/content/trainer-b-d@1x.jpg" width="260" height="520" alt="Наш тренер - Алексей." srcset="img/content/trainer-b-d@2x.jpg 2x">
+                    <img src="img/content/trainer-b-d@1x.jpg" width="260" height="294" alt="Наш тренер - Алексей." srcset="img/content/trainer-b-d@2x.jpg 2x">
                   </picture>
                 </div>
                 <div class="trainer-card__info">
@@ -347,7 +347,7 @@
                   </ul>
                 </div>
               </li>
-              <li class="trainer-card swiper-slide" tabindex="0">
+              <li class="trainer-card swiper-slide" data-element="trainer-card" tabindex="0">
                 <div class="trainer-card__image">
                   <picture>
                     <!-- 1х: 226px; 2x: 452px -->
@@ -361,7 +361,7 @@
                     <!-- 1х: 268px; 2x: 536px -->
                     <source media="(max-width: 1199px)" srcset="img/content/trainer-c-t@1x.jpg 1x, img/content/trainer-c-t@2x.jpg 2x">
                     <!-- 1х: 260px; 2x: 520px -->
-                    <img src="img/content/trainer-c-d@1x.jpg" width="260" height="520" alt="Наш тренер - Александр." srcset="img/content/trainer-c-d@2x.jpg 2x">
+                    <img src="img/content/trainer-c-d@1x.jpg" width="260" height="294" alt="Наш тренер - Александр." srcset="img/content/trainer-c-d@2x.jpg 2x">
                   </picture>
                 </div>
                 <div class="trainer-card__info">
@@ -374,7 +374,7 @@
                   </ul>
                 </div>
               </li>
-              <li class="trainer-card swiper-slide" tabindex="0">
+              <li class="trainer-card swiper-slide" data-element="trainer-card" tabindex="0">
                 <div class="trainer-card__image">
                   <picture>
                     <!-- 1х: 226px; 2x: 452px -->
@@ -388,7 +388,7 @@
                     <!-- 1х: 268px; 2x: 536px -->
                     <source media="(max-width: 1199px)" srcset="img/content/trainer-d-t@1x.jpg 1x, img/content/trainer-d-t@2x.jpg 2x">
                     <!-- 1х: 260px; 2x: 520px -->
-                    <img src="img/content/trainer-d-d@1x.jpg" width="260" height="520" alt="Наш тренер - Мария." srcset="img/content/trainer-d-d@2x.jpg 2x">
+                    <img src="img/content/trainer-d-d@1x.jpg" width="260" height="294" alt="Наш тренер - Мария." srcset="img/content/trainer-d-d@2x.jpg 2x">
                   </picture>
                 </div>
                 <div class="trainer-card__info">
@@ -401,7 +401,7 @@
                   </ul>
                 </div>
               </li>
-              <li class="trainer-card swiper-slide" tabindex="0">
+              <li class="trainer-card swiper-slide" data-element="trainer-card" tabindex="0">
                 <div class="trainer-card__image">
                   <picture>
                     <!-- 1х: 226px; 2x: 452px -->
@@ -415,7 +415,7 @@
                     <!-- 1х: 268px; 2x: 536px -->
                     <source media="(max-width: 1199px)" srcset="img/content/trainer-a-t@1x.jpg 1x, img/content/trainer-a-t@2x.jpg 2x">
                     <!-- 1х: 260px; 2x: 520px -->
-                    <img src="img/content/trainer-a-d@1x.jpg" width="260" height="520" alt="Наш тренер - Павлова." srcset="img/content/trainer-a-d@2x.jpg 2x">
+                    <img src="img/content/trainer-a-d@1x.jpg" width="260" height="294" alt="Наш тренер - Павлова." srcset="img/content/trainer-a-d@2x.jpg 2x">
                   </picture>
                 </div>
                 <div class="trainer-card__info">
@@ -428,7 +428,7 @@
                   </ul>
                 </div>
               </li>
-              <li class="trainer-card swiper-slide" tabindex="0">
+              <li class="trainer-card swiper-slide" data-element="trainer-card" tabindex="0">
                 <div class="trainer-card__image">
                   <picture>
                     <!-- 1х: 226px; 2x: 452px -->
@@ -442,7 +442,7 @@
                     <!-- 1х: 268px; 2x: 536px -->
                     <source media="(max-width: 1199px)" srcset="img/content/trainer-b-t@1x.jpg 1x, img/content/trainer-b-t@2x.jpg 2x">
                     <!-- 1х: 260px; 2x: 520px -->
-                    <img src="img/content/trainer-b-d@1x.jpg" width="260" height="520" alt="Наш тренер - Лавров." srcset="img/content/trainer-b-d@2x.jpg 2x">
+                    <img src="img/content/trainer-b-d@1x.jpg" width="260" height="294" alt="Наш тренер - Лавров." srcset="img/content/trainer-b-d@2x.jpg 2x">
                   </picture>
                 </div>
                 <div class="trainer-card__info">
@@ -455,7 +455,7 @@
                   </ul>
                 </div>
               </li>
-              <li class="trainer-card swiper-slide" tabindex="0">
+              <li class="trainer-card swiper-slide" data-element="trainer-card" tabindex="0">
                 <div class="trainer-card__image">
                   <picture>
                     <!-- 1х: 226px; 2x: 452px -->
@@ -469,7 +469,7 @@
                     <!-- 1х: 268px; 2x: 536px -->
                     <source media="(max-width: 1199px)" srcset="img/content/trainer-c-t@1x.jpg 1x, img/content/trainer-c-t@2x.jpg 2x">
                     <!-- 1х: 260px; 2x: 520px -->
-                    <img src="img/content/trainer-c-d@1x.jpg" width="260" height="520" alt="Наш тренер - Пашков." srcset="img/content/trainer-c-d@2x.jpg 2x">
+                    <img src="img/content/trainer-c-d@1x.jpg" width="260" height="294" alt="Наш тренер - Пашков." srcset="img/content/trainer-c-d@2x.jpg 2x">
                   </picture>
                 </div>
                 <div class="trainer-card__info">
@@ -482,7 +482,7 @@
                   </ul>
                 </div>
               </li>
-              <li class="trainer-card swiper-slide" tabindex="0">
+              <li class="trainer-card swiper-slide" data-element="trainer-card" tabindex="0">
                 <div class="trainer-card__image">
                   <picture>
                     <!-- 1х: 226px; 2x: 452px -->
@@ -496,7 +496,7 @@
                     <!-- 1х: 268px; 2x: 536px -->
                     <source media="(max-width: 1199px)" srcset="img/content/trainer-d-t@1x.jpg 1x, img/content/trainer-d-t@2x.jpg 2x">
                     <!-- 1х: 260px; 2x: 520px -->
-                    <img src="img/content/trainer-d-d@1x.jpg" width="260" height="520" alt="Наш тренер - Кетова." srcset="img/content/trainer-d-d@2x.jpg 2x">
+                    <img src="img/content/trainer-d-d@1x.jpg" width="260" height="294" alt="Наш тренер - Кетова." srcset="img/content/trainer-d-d@2x.jpg 2x">
                   </picture>
                 </div>
                 <div class="trainer-card__info">
@@ -593,7 +593,7 @@
               <!-- 1х: 399px; 2x: 798px -->
               <source media="(max-width: 1199px)" srcset="img/content/promo-t@1x.jpg 1x, img/content/promo-t@2x.jpg 2x">
               <!-- 1х: 280px; 2x: 560px -->
-              <img src="img/content/promo-d@1x.jpg" width="280" height="560" alt="Акция - год всего за 4999." srcset="img/content/promo-d@2x.jpg 2x">
+              <img src="img/content/promo-d@1x.jpg" width="280" height="462" alt="Акция - год всего за 4999." srcset="img/content/promo-d@2x.jpg 2x">
 
             </picture>
           </div>
@@ -615,13 +615,13 @@
         <h2>Отзывы</h2>
         <div class="reviews__slider-wrapper">
           <div class="reviews__slide-control">
-            <button class="reviews__slide-button reviews__slide-button--prev">
+            <button class="reviews__slide-button reviews__slide-button--prev slide-button">
               <span class="visually-hidden">К предыдущему отзыву.</span>
               <svg width="16" height="32" aria-hidden="true" focusable="false">
                 <use xlink:href="img/sprite_auto.svg#arrow-r"></use>
               </svg>
             </button>
-            <button class="reviews__slide-button reviews__slide-button--next">
+            <button class="reviews__slide-button reviews__slide-button--next slide-button">
               <span class="visually-hidden">К следующнму отзыву.</span>
               <svg width="16" height="32" aria-hidden="true" focusable="false">
                 <use xlink:href="img/sprite_auto.svg#arrow-r"></use>

@@ -1,0 +1,38 @@
+.slide-button {
+  padding: 0;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+
+  svg {
+    fill: none;
+  }
+
+  &:hover,
+  &:focus-visible {
+    svg {
+      fill: $color-default-black;
+      stroke: $color-default-black;
+    }
+  }
+
+  @include vp-767 {
+    svg {
+      width: 10px;
+      height: 19px;
+    }
+  }
+}
+
+.slide-button[disabled] {
+  opacity: 0.2;
+  cursor: no-drop;
+
+  &:hover,
+  &:focus-visible {
+    svg {
+      fill: none;
+      stroke: #afafaf;
+    }
+  }
+}

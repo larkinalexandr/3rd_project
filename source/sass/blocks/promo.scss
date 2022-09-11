@@ -8,7 +8,6 @@
   }
 
   @include vp-1199 {
-    padding: 0 45px;
     margin-bottom: 30px;
 
     h2 {
@@ -40,12 +39,14 @@
   @include vp-1199 {
     grid-template-columns: 1fr 1fr;
     gap: 30px;
+    width: 88.28%;
   }
 
   @include vp-767 {
     display: flex;
     flex-direction: column;
     gap: 0;
+    width: 100%;
   }
 }
 
@@ -58,7 +59,7 @@
   color: #ffffff;
 
   @include vp-1199 {
-    grid-template-columns: 1fr 399px;
+    grid-template-columns: 41.15% 58.85%;
   }
 
   @include vp-767 {
@@ -212,12 +213,6 @@
 
 .promo__image {
   @include vp-1199 {
-    img {
-      width: 399px;
-    }
-  }
-
-  @include vp-767 {
     img {
       width: 100%;
     }

@@ -16,7 +16,8 @@
   }
 
   @include vp-1199 {
-    padding: 101px 45px 97px;
+    padding: 101px 0 97px;
+    width: 88.28%;
 
     h2 {
       @include h2-tablet;
@@ -26,6 +27,7 @@
 
   @include vp-767 {
     padding: 71px 0 0;
+    width: 100%;
 
     h2 {
       @include h2-mobile;
@@ -128,9 +130,14 @@
 
 .advantages__item--comfort .advantages__description {
   margin-bottom: -4px;
+  min-width: 185px;
 
-  p {
-    @include vp-767 {
+  @include vp-1199 {
+    min-width: auto;
+  }
+
+  @include vp-767 {
+    p {
       padding: 0 47px;
     }
   }

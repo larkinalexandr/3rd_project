@@ -15,7 +15,7 @@
 
   @include vp-1199 {
     padding: 100px 0 65px;
-    max-width: 626px;
+    width: 81.51%;
 
     h2 {
       @include h2-tablet;
@@ -90,45 +90,8 @@
 }
 
 .trainers__slide-button {
-  padding: 0;
-  border: none;
-  background: transparent;
-  cursor: pointer;
-
   &--prev {
     transform: rotate(180deg);
-  }
-
-  svg {
-    fill: none;
-  }
-
-  &:hover,
-  &:focus-visible {
-    svg {
-      fill: $color-default-black;
-      stroke: $color-default-black;
-    }
-  }
-
-  @include vp-767 {
-    svg {
-      width: 10px;
-      height: 19px;
-    }
-  }
-}
-
-.trainers__slide-button[disabled] {
-  opacity: 0.2;
-  cursor: unset;
-
-  &:hover,
-  &:focus-visible {
-    svg {
-      fill: none;
-      stroke: #afafaf;
-    }
   }
 }
 
