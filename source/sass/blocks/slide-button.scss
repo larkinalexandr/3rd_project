@@ -8,11 +8,13 @@
     fill: none;
   }
 
-  &:hover,
-  &:focus-visible {
-    svg {
-      fill: $color-default-black;
-      stroke: $color-default-black;
+  @include no-touch {
+    &:hover,
+    &:focus-visible {
+      svg {
+        fill: $color-default-black;
+        stroke: $color-default-black;
+      }
     }
   }
 
@@ -26,13 +28,5 @@
 
 .slide-button[disabled] {
   opacity: 0.2;
-  cursor: no-drop;
-
-  &:hover,
-  &:focus-visible {
-    svg {
-      fill: none;
-      stroke: #afafaf;
-    }
-  }
+  pointer-events: none;
 }

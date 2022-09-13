@@ -91,16 +91,6 @@
   transition: $trans-600;
   transition-property: transform;
 
-  &:hover,
-  &:focus-visible {
-    transform: translate(-50%, -50%) scale(1.2);
-    background: linear-gradient(44.89deg, #0155b7 25.38%, #d2032f 74.89%);
-  }
-
-  &:active {
-    background: linear-gradient(44.89deg, #0368e1 25.38%, #fa0338 74.89%);
-  }
-
   &::before {
     content: "";
     position: absolute;
@@ -113,6 +103,18 @@
     background-image: linear-gradient(97.05deg, rgba(237, 2, 51, 0.2) 17.6%, rgba(0, 62, 183, 0.2) 95.31%);
     mask-image: radial-gradient(circle at center, transparent 67%, #ffffff 68%);
     user-select: none;
+  }
+
+  @include no-touch {
+    &:hover,
+    &:focus-visible {
+      transform: translate(-50%, -50%) scale(1.2);
+      background: linear-gradient(44.89deg, #0155b7 25.38%, #d2032f 74.89%);
+    }
+
+    &:active {
+      background: linear-gradient(44.89deg, #0368e1 25.38%, #fa0338 74.89%);
+    }
   }
 
   @include vp-1199 {

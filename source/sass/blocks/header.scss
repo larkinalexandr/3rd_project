@@ -68,15 +68,18 @@
     color: #ffffff;
     transition: $trans-600;
     transition-property: transform;
+  }
 
+  @include no-touch {
+    a {
+      &:hover,
+      &:focus-visible {
+        transform: scale(1.2);
+      }
 
-    &:hover,
-    &:focus-visible {
-      transform: scale(1.2);
-    }
-
-    &:active {
-      color: #dadaef;
+      &:active {
+        color: #dadaef;
+      }
     }
   }
 

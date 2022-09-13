@@ -18,6 +18,12 @@
   }
 }
 
+@mixin no-touch {
+  @media (hover: hover), screen and (min-width: 0\0) {
+    @content;
+  }
+}
+
 @mixin container {
   width: 100%;
   max-width: $container-max-width;

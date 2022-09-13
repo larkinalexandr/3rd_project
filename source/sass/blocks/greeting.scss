@@ -25,33 +25,24 @@
   color: #ffffff;
 
   a {
-    display: flex;
-    flex-wrap: wrap;
     align-self: flex-end;
-    align-items: center;
-    justify-content: center;
-    padding: 5px;
     margin-top: 51px;
     margin-bottom: 5px;
     min-width: 234px;
     min-height: 61px;
-    font-family: $ff-roboto-condensed;
-    font-weight: 700;
     font-size: 12px;
     line-height: 14px;
-    letter-spacing: 0.05em;
     color: inherit;
     border: 4px solid #ffffff;
-    box-sizing: border-box;
-    text-transform: uppercase;
-    user-select: none;
-    transition: $trans-600;
-    transition-property: background-color;
+  }
 
-    &:hover,
-    &:focus-visible {
-      background-color: #ffffff;
-      color: $color-default-black;
+  @include no-touch {
+    a {
+      &:hover,
+      &:focus-visible {
+        background-color: #ffffff;
+        color: $color-default-black;
+      }
     }
   }
 

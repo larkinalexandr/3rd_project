@@ -1,0 +1,23 @@
+.button {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  padding: 8px;
+  font-family: $ff-roboto-condensed;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  background-color: transparent;
+  text-transform: uppercase;
+  box-sizing: border-box;
+  user-select: none;
+  cursor: pointer;
+  transition: $trans-600;
+  transition-property: background, color;
+}
+
+.button.is-disabled,
+.button[disabled] {
+  opacity: 0.3;
+  pointer-events: none;
+}

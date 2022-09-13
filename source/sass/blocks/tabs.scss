@@ -59,14 +59,22 @@
     transition: $trans-600;
     transition-property: transform;
 
-
-    &:hover,
-    &:focus-visible {
-      color: #d10a42;
+    &[disabled] {
+      opacity: 0.3;
+      pointer-events: none;
     }
+  }
 
-    &:active {
-      color: #8505af;
+  @include no-touch {
+    button {
+      &:hover,
+      &:focus-visible {
+        color: #d10a42;
+      }
+
+      &:active {
+        color: #8505af;
+      }
     }
   }
 
@@ -89,14 +97,12 @@
   }
 }
 
-.tabs__title-list li.is-active {
-  button {
-    color: #102654;
-    border-bottom: 2px solid #d10a42;
+.tabs__title-list button.is-active {
+  color: #102654;
+  border-bottom: 2px solid #d10a42;
 
-    &:focus-visible {
-      color: #d10a42;
-    }
+  &:focus-visible {
+    color: #d10a42;
   }
 }
 
@@ -174,38 +180,30 @@
   }
 
   a {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 10px;
     min-width: 208px;
     min-height: 66px;
-    font-family: $ff-roboto-condensed;
-    font-weight: 700;
     font-size: 12px;
     line-height: 14px;
-    letter-spacing: 0.05em;
-    text-transform: uppercase;
     border: 2px solid #102654;
-    box-sizing: border-box;
-    user-select: none;
-    cursor: pointer;
   }
 
-  &:hover,
-  &:focus-visible,
-  &:focus-within {
-    border: 7px solid transparent;
-    border-image-source: linear-gradient(135deg, #d10a42 0%, #00359f 100%);
-    border-image-slice: 1;
+  @include no-touch {
+    &:hover,
+    &:focus-visible,
+    &:focus-within {
+      border: 7px solid transparent;
+      border-image-source: linear-gradient(135deg, #d10a42 0%, #00359f 100%);
+      border-image-slice: 1;
 
-    a {
-      color: #ffffff;
-      background: linear-gradient(97.05deg, #ed0233 17.6%, #003eb7 95.31%);
-      border: none;
+      a {
+        color: #ffffff;
+        transition-duration: unset;
+        background: linear-gradient(97.05deg, #ed0233 17.6%, #003eb7 95.31%);
+        border: none;
 
-      &:active {
-        background: linear-gradient(97.05deg, #ff0136 17.6%, #014bdc 95.31%);
+        &:active {
+          background: linear-gradient(97.05deg, #ff0136 17.6%, #014bdc 95.31%);
+        }
       }
     }
   }
@@ -255,4 +253,10 @@
       margin-right: 24px;
     }
   }
+}
+
+.tabs__content-item.is-disabled {
+  pointer-events: none;
+  filter: grayscale(100%);
+  opacity: 0.2;
 }
