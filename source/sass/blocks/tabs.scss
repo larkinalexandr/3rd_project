@@ -191,9 +191,9 @@
     &:hover,
     &:focus-visible,
     &:focus-within {
-      border: 7px solid transparent;
-      border-image-source: linear-gradient(135deg, #d10a42 0%, #00359f 100%);
-      border-image-slice: 1;
+      border-width: 7px;
+      border-image: linear-gradient(135deg, #d10a42 0%, #00359f 100%) 1;
+      border-style: solid;
 
       a {
         color: #ffffff;
