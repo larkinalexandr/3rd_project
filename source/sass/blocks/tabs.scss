@@ -114,6 +114,12 @@
     grid-template-columns: repeat(3, 1fr);
     gap: 40px;
   }
+
+  @include vp-767 {
+    ul {
+      gap: 0;
+    }
+  }
 }
 
 .tabs__content ul.is-active {
