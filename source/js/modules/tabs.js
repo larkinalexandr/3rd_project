@@ -1,5 +1,5 @@
 export const showTabs = () => {
-  const tabTitle = document.querySelectorAll('[data-element="tabs-title-list"] li');
+  const tabTitle = document.querySelectorAll('[data-element="tabs-title-list"] button');
   const tabContent = document.querySelectorAll('[data-element="tabs-content"] ul');
 
   if (tabTitle.length > 0 && tabContent.length > 0) {

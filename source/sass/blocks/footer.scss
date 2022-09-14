@@ -64,14 +64,18 @@
     color: #ffffff;
     cursor: pointer;
     user-select: none;
+  }
 
-    &:hover,
-    &:focus-visible {
-      color: #ed0233;
-    }
+  @include no-touch {
+    a {
+      &:hover,
+      &:focus-visible {
+        color: #ed0233;
+      }
 
-    &:active {
-      opacity: 0.8;
+      &:active {
+        opacity: 0.8;
+      }
     }
   }
 
@@ -135,17 +139,19 @@
     list-style-type: none;
   }
 
-  a {
-    &:hover,
-    &:focus-visible {
-      svg {
-        transform: scale(1.4);
+  @include no-touch {
+    a {
+      &:hover,
+      &:focus-visible {
+        svg {
+          transform: scale(1.4);
+        }
       }
-    }
 
-    &:active {
-      svg {
-        opacity: 0.8;
+      &:active {
+        svg {
+          opacity: 0.8;
+        }
       }
     }
   }

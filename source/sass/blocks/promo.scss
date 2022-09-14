@@ -108,15 +108,19 @@
     border-bottom: 1px solid #ffffff;
     cursor: pointer;
     user-select: none;
+  }
 
-    &:hover,
-    &:focus-visible {
-      color: #0676f5;
-      border-bottom: 1px solid #0676f5;
-    }
+  @include no-touch {
+    a {
+      &:hover,
+      &:focus-visible {
+        color: #0676f5;
+        border-bottom: 1px solid #0676f5;
+      }
 
-    &:active {
-      opacity: 0.7;
+      &:active {
+        opacity: 0.7;
+      }
     }
   }
 

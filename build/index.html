@@ -36,6 +36,7 @@
                 <li>Кардио-зона</li>
               </ul>
             </div>
+            <!--чтобы сделать кнопку не активной, добавьте <a> класс "is-disabled"-->
             <a class="greeting__button button" href="#tickets">Купить абонемент</a>
           </div>
         </div>
@@ -123,8 +124,8 @@
         <div class="tickets__tabs tabs">
           <div class="tabs__header">
             <ul class="tabs__title-list" data-element="tabs-title-list">
-              <li class="is-active">
-                <button type="button">1 месяц</button>
+              <li>
+                <button class="is-active" type="button">1 месяц</button>
               </li>
               <li>
                 <button type="button">6 месяцев</button>
@@ -136,6 +137,7 @@
           </div>
           <div class="tabs__content" data-element="tabs-content">
             <ul class="is-active">
+              <!--чтобы сделать карточку не активной, добавьте <li> класс "is-disabled"-->
               <li class="tabs__content-item">
                 <h3>С тренером</h3>
                 <p>12 занятий</p>
@@ -144,7 +146,7 @@
                     <use xlink:href="img/sprite_auto.svg#rouble"></use>
                   </svg>
                 </b>
-                <a href="#">купить абонемент</a>
+                <a class="button" href="#">купить абонемент</a>
               </li>
               <li class="tabs__content-item">
                 <h3>Дневной</h3>
@@ -154,7 +156,7 @@
                     <use xlink:href="img/sprite_auto.svg#rouble"></use>
                   </svg>
                 </b>
-                <a href="#">купить абонемент</a>
+                <a class="button" href="#">купить абонемент</a>
               </li>
               <li class="tabs__content-item">
                 <h3>Полный день</h3>
@@ -164,7 +166,7 @@
                     <use xlink:href="img/sprite_auto.svg#rouble"></use>
                   </svg>
                 </b>
-                <a href="#">купить абонемент</a>
+                <a class="button" href="#">купить абонемент</a>
               </li>
             </ul>
             <ul>
@@ -176,7 +178,7 @@
                     <use xlink:href="img/sprite_auto.svg#rouble"></use>
                   </svg>
                 </b>
-                <a href="#">купить абонемент</a>
+                <a class="button" href="#">купить абонемент</a>
               </li>
               <li class="tabs__content-item">
                 <h3>Дневной</h3>
@@ -186,7 +188,7 @@
                     <use xlink:href="img/sprite_auto.svg#rouble"></use>
                   </svg>
                 </b>
-                <a href="#">купить абонемент</a>
+                <a class="button" href="#">купить абонемент</a>
               </li>
               <li class="tabs__content-item">
                 <h3>Полный день</h3>
@@ -196,7 +198,7 @@
                     <use xlink:href="img/sprite_auto.svg#rouble"></use>
                   </svg>
                 </b>
-                <a href="#">купить абонемент</a>
+                <a class="button" href="#">купить абонемент</a>
               </li>
             </ul>
             <ul>
@@ -208,7 +210,7 @@
                     <use xlink:href="img/sprite_auto.svg#rouble"></use>
                   </svg>
                 </b>
-                <a href="#">купить абонемент</a>
+                <a class="button" href="#">купить абонемент</a>
               </li>
               <li class="tabs__content-item">
                 <h3>Дневной</h3>
@@ -218,7 +220,7 @@
                     <use xlink:href="img/sprite_auto.svg#rouble"></use>
                   </svg>
                 </b>
-                <a href="#">купить абонемент</a>
+                <a class="button" href="#">купить абонемент</a>
               </li>
               <li class="tabs__content-item">
                 <h3>Полный день</h3>
@@ -228,7 +230,7 @@
                     <use xlink:href="img/sprite_auto.svg#rouble"></use>
                   </svg>
                 </b>
-                <a href="#">купить абонемент</a>
+                <a class="button" href="#">купить абонемент</a>
               </li>
             </ul>
           </div>
@@ -253,7 +255,8 @@
             </div>
           </div>
           <p>Ежегодные соревнования по CrossFit</p>
-          <a href="#">заполнить заявку</a>
+          <!--чтобы сделать кнопку не активной, добавьте <a> класс "is-disabled"-->
+          <a class="button" href="#">заполнить заявку</a>
         </div>
         <div class="announcement__image">
           <picture>
@@ -697,7 +700,7 @@
             <label><span class="visually-hidden">Телефон</span>
               <input type="tel" name="phone" pattern="^\+?\(?(\d+-?\s?\(?\)?-?\s?)+\d+$" placeholder="Телефон" required>
             </label>
-            <button type="submit">отправить</button>
+            <button class="button" type="submit">отправить</button>
           </form>
         </div>
       </div>
