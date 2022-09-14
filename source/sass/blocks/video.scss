@@ -1,8 +1,8 @@
 .video {
   position: relative;
   margin: 0 auto;
-  top: -120px;
-  right: -39px;
+  top: -113px;
+  right: 211px;
   width: 364px;
   background-color: #ffffff;
   aspect-ratio: 16 / 9;
@@ -10,14 +10,15 @@
   @include vp-1199 {
     top: unset;
     right: unset;
-    width: 34.64%;
-    transform: translate(0, -60%);
+    width: 39.23%;
+    transform: translate(0, -50%);
   }
 
   @include vp-767 {
-    margin-bottom: 57px;
+    top: 40px;
     width: 100%;
     transform: unset;
+    margin-bottom: 57px;
   }
 }
 
