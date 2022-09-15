@@ -149,9 +149,9 @@
   grid-column: span 2;
   font-family: $ff-roboto-condensed;
   color: #1c3374;
-  border: 7px solid transparent;
-  border-image-source: linear-gradient(170deg, #d10a42 0%, #00359f 100%);
-  border-image-slice: 1;
+  border-width: 7px;
+  border-image: linear-gradient(170deg, #d10a42 0%, #00359f 100%) 1;
+  border-style: solid;
 
   h3 {
     margin: 0 0 3px;
@@ -216,9 +216,21 @@
 }
 
 .promo__image {
+  img {
+    height: 100%;
+    object-fit: cover;
+  }
+
   @include vp-1199 {
     img {
       width: 100%;
+      object-position: 40%;
+    }
+  }
+
+  @include vp-767 {
+    img {
+      height: auto;
     }
   }
 }

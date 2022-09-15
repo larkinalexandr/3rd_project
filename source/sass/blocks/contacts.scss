@@ -28,7 +28,7 @@
     margin: 20px auto 20px 0;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    min-width: 410px;
+    width: 410px;
     column-gap: 30px;
     row-gap: 27px;
   }
@@ -259,19 +259,23 @@
     color: inherit;
     transition: $trans-600;
     transition-property: transform;
-
-    &:hover,
-    &:focus-visible {
-      transform: scale(1.1);
-    }
-
-    &:active {
-      color: #014bdc;
-    }
   }
 
   &:last-child {
-    margin-bottom: 0;
+    margin-bottom: 10px;
+  }
+
+  @include no-touch {
+    a {
+      &:hover,
+      &:focus-visible {
+        transform: scale(1.1);
+      }
+
+      &:active {
+        color: #014bdc;
+      }
+    }
   }
 
   p,
@@ -286,6 +290,10 @@
 
   @include vp-1199 {
     margin-bottom: 20px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
 
     b {
       margin-bottom: 5px;

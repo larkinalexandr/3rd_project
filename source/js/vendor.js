@@ -5,6 +5,7 @@ import './vendor/swiper';
 /* eslint-disable no-undef */
 
 new Swiper('.trainers__swiper', {
+  loop: true,
 
   navigation: {
     nextEl: '.trainers__slide-button--next',
