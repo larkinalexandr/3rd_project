@@ -216,9 +216,20 @@
 }
 
 .promo__image {
+  img {
+    height: 100%;
+    object-fit: cover;
+  }
   @include vp-1199 {
     img {
       width: 100%;
+      object-position: 40%;
+    }
+  }
+
+  @include vp-767 {
+    img {
+      height: auto;
     }
   }
 }
